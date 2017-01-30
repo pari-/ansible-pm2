@@ -1,0 +1,9 @@
+---
+
+- name: install pm2 nodejs package
+  npm: >
+    name="{{ pm2_install_npm_name }}"
+    path="{{ pm2_install_npm_path|default(omit) }}"
+    production="{{ pm2_install_npm_production }}"
+    state="{{ pm2_install_npm_state }}"
+    global="{{ pm2_install_npm_global }}"

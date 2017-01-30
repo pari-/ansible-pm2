@@ -1,0 +1,5 @@
+---
+
+- name: determine needed startup script
+  command: >
+    "{{ pm2_configure_bin }}" startup

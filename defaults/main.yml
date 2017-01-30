@@ -1,0 +1,16 @@
+---
+
+pm2_prerequisites_supported_distribution_releases:
+  - "wheezy"
+  - "jessie"
+  - "stretch"
+  - "sid"
+  - "precise"
+  - "trusty"
+  - "xenial"
+  - "yakkety"
+pm2_install_npm_name: "pm2"
+pm2_install_npm_production: "yes" 
+pm2_install_npm_state: "present"
+pm2_install_npm_global: "yes"
+pm2_configure_bin: "/usr/bin/pm2"
