@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = hn
 
   config.vm.provision :ansible do |ansible|
-       ansible.playbook = "test.yml"
-       ansible.sudo = true
+    ansible.playbook = "test.yml"
+    ansible.galaxy_role_file = "requirements.yml"
+    ansible.sudo = true
   end
 end
