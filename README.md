@@ -13,12 +13,6 @@ Ansible version in use for development: 2.2.0
 ```yaml
 - hosts: pm2-servers
 
-  pre_tasks:
-  - name: install ansible"-dependencies with ansible-galaxy
-    local_action: command
-      ansible-galaxy install --force -r requirements.yml -p roles/
-    become: false
-
   roles: 
     - { role: ansible-nodejs, nodejs_install_version: "node_7.x", nodejs_install_apt_key_id: "68576280" }
     - { role: ansible-pm2 }
