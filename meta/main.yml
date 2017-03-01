@@ -1,9 +1,14 @@
+---
+
+dependencies:
+  - "ansible-nodejs"
+
 galaxy_info:
-  author: Patrick Ringl
-  description: Ansible role for NodeJS PM2
-  license: MIT
+  author: "Patrick Ringl"
+  description: "Ansible role for NodeJS PM2"
+  license: "MIT"
   galaxy_tags:
-    - nodejs
-    - pm2
+    - "nodejs"
+    - "pm2"
   dependencies:
-    - { role: ansible-nodejs, nodejs_install_version: 'node_7.x', nodejs_install_apt_key_id: '68576280' }
+    - "ansible-nodejs"
