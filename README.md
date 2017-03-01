@@ -25,8 +25,12 @@ Ansible version in use for development: 2.2.1
 ```yaml
 - hosts: pm2-servers
 
+  vars:
+    nodejs_version: "node_7.x"
+    nodejs_apt_key_id: "68576280"
+
   roles: 
-    - { role: ansible-pm2 }
+    - "ansible-pm2"
 ```
 
 ## Role Variables
