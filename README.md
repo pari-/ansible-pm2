@@ -6,7 +6,8 @@ An Ansible role which installs and configures the production process manager for
 
 - [Requirements](#requirements)
 - [Example](#example)
-- [Role Variables](#role-variables)
+- [Variables](#variables)
+  * [Role Variables](#role-variables)
   * [Role Internals](#role-internals)
 - [Dependencies](#dependencies)
 - [License](#license)
@@ -33,20 +34,24 @@ Ansible version in use for development: 2.2.1
     - "ansible-pm2"
 ```
 
-## Role Variables
+## Variables
 
 Available variables are listed below, along with default values (see defaults/main.yml):
+
+### Role Variables
+
+None
 
 ### Role Internals
 
 variable | default | notes
 -------- | ------- | -----
-`pm2_supported_distro_list` | `['jessie']` | `A list of distribution releases this role supports`
-`pm2_npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that us to be installed`
+`pm2_bin` | `"/usr/bin/pm2"` | `Path to the 'pm2'-binary` 
+`pm2_npm_global` | `"yes"` | `Install the node.js library globally`
+`pm2_npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that is to be installed`
 `pm2_npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
 `pm2_npm_state` | `"present"` | `The state of the node.js library`
-`pm2_npm_global` | `"yes"` | `Install the node.js library globally`
-`pm2_bin` | `"/usr/bin/pm2"` | `Path to the 'pm2'-binary` 
+`pm2_supported_distro_list` | `['jessie']` | `A list of distribution releases this role supports`
 
 ## Dependencies
 
