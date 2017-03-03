@@ -7,3 +7,4 @@
     production="{{ pm2_npm_production }}"
     state="{{ pm2_npm_state }}"
     global="{{ pm2_npm_global }}"
+    version="{{ pm2_version }}"

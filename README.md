@@ -29,6 +29,7 @@ Ansible version in use for development: 2.2.1
   vars:
     nodejs_version: "node_7.x"
     nodejs_apt_key_id: "68576280"
+    pm2_version: "2.4.2"
 
   roles: 
     - "ansible-pm2"
@@ -40,7 +41,9 @@ Available variables are listed below, along with default values (see defaults/ma
 
 ### Role Variables
 
-None
+variable | default | notes
+-------- | ------- | -----
+`pm2_version` | `"2.4.2"` | `Version of the 'pm2'-npm-package that is to be installed
 
 ### Role Internals
 

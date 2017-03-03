@@ -3,3 +3,4 @@
 - name: determine needed startup script
   command: >
     "{{ pm2_bin }}" startup
+  changed_when: False
