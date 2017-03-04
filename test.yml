@@ -6,4 +6,5 @@
     - 'example-vars.yml'
 
   roles:
-    - "{{ role_name | default('ansible-pm2') }}"
+    - { role: ansible-nodejs, tags: ['ansible-nodejs'] }
+    - { role: "{{ role_name | default('ansible-pm2') }}", tags: ['ansible-pm2'] }

@@ -1,8 +1,5 @@
 ---
 
-dependencies:
-  - "ansible-nodejs"
-
 galaxy_info:
   author: "Patrick Ringl"
   description: "Ansible role for NodeJS PM2"
