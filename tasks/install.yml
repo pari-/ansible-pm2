@@ -1,10 +1,10 @@
 ---
 
 - name: install pm2 nodejs package
-  npm: >
-    name="{{ pm2_npm_name }}"
-    path="{{ pm2_npm_path|default(omit) }}"
-    production="{{ pm2_npm_production }}"
-    state="{{ pm2_npm_state }}"
-    global="{{ pm2_npm_global }}"
-    version="{{ pm2_version }}"
+  npm:
+    name: "{{ pm2_npm_name }}"
+    path: "{{ pm2_npm_path|default(omit) }}"
+    production: "{{ pm2_npm_production }}"
+    state: "{{ pm2_npm_state }}"
+    global: "{{ pm2_npm_global }}"
+    version: "{{ pm2_version }}"
