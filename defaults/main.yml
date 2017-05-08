@@ -4,6 +4,7 @@
 # prerequisites
 #
 pm2_supported_distro_list:
+  - "trusty"
   - "jessie"
 
 #

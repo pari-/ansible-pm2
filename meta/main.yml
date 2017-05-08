@@ -4,6 +4,7 @@ galaxy_info:
   author: "Patrick Ringl"
   description: "Ansible role for NodeJS PM2"
   license: "MIT"
+  min_ansible_version: 2.0
   galaxy_tags:
     - "nodejs"
     - "pm2"
