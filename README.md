@@ -61,7 +61,7 @@ variable | default | notes
 `pm2_npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that is to be installed`
 `pm2_npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
 `pm2_npm_state` | `"present"` | `The state of the node.js library`
-`pm2_supported_distro_list` | `['jessie']` | `A list of distribution releases this role supports`
+`pm2_supported_distro_list` | `['jessie', 'trusty']` | `A list of distribution releases this role supports`
 
 ## Dependencies
 
