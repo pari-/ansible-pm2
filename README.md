@@ -8,9 +8,7 @@ An Ansible role which installs and configures the production process manager for
 
 - [Requirements](#requirements)
 - [Example](#example)
-- [Variables](#variables)
-  * [Role Variables](#role-variables)
-  * [Role Internals](#role-internals)
+- [Role Variables](#role-variables)
 - [Dependencies](#dependencies)
 - [License](#license)
 - [Author Information](#author-information)
@@ -23,45 +21,39 @@ Currently this role is developed for and tested on Debian GNU/Linux (release: je
 
 Ansible version compatibility:
 
-- __2.3.0__ (current version in use for development of this role)
-- 2.2.2
-- 2.1.5
-- 2.0.2
+- __2.3.1.0__ (current version in use for development of this role) 
+- 2.2.3.0
+- 2.1.6.0
+- 2.0.2.0
 
 ## Example
 
 ```yaml
-- hosts: pm2-servers
+---
+
+- hosts: "{{ hosts_group | default('all') }}"
 
   vars:
-    nodejs_version: "node_7.x"
-    nodejs_apt_key_id: "68576280"
-    pm2_version: "2.4.2"
 
-  roles: 
-    - "ansible-pm2"
+  roles:
+    - { role: "ansible-nodejs", tags: ['nodejs'] }
+    - { role: "{{ role_name | default('ansible-pm2') }}", tags: ['pm2'] }
+
 ```
 
-## Variables
+## Role Variables
 
-Available variables are listed below, along with default values (see defaults/main.yml):
-
-### Role Variables
+Available variables are listed below, along with default values (see defaults/main.yml). They're generally prefixed with `pm2_` (which I deliberately leave out here for better formatting).
 
 variable | default | notes
 -------- | ------- | -----
-`pm2_version` | `"2.4.2"` | `Version of the 'pm2'-npm-package that is to be installed
-
-### Role Internals
-
-variable | default | notes
--------- | ------- | -----
-`pm2_bin` | `"/usr/bin/pm2"` | `Path to the 'pm2'-binary` 
-`pm2_npm_global` | `"yes"` | `Install the node.js library globally`
-`pm2_npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that is to be installed`
-`pm2_npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
-`pm2_npm_state` | `"present"` | `The state of the node.js library`
-`pm2_supported_distro_list` | `['jessie', 'trusty']` | `A list of distribution releases this role supports`
+`bin` | `"/usr/bin/pm2"` | `Path to the 'pm2'-binary` 
+`npm_global` | `"yes"` | `Install the node.js library globally`
+`npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that is to be installed`
+`npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
+`startup_user` | `"root"` | `The user under which pm2's startup script is executed under`
+`supported_distro_list` | `['jessie']` | `A list of distribution releases this role supports`
+`version` | `"2.4.6"` | `Version of the 'pm2'-npm-package that is to be installed
 
 ## Dependencies
 

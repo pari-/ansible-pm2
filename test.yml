@@ -2,9 +2,8 @@
 
 - hosts: "{{ hosts_group | default('all') }}"
 
-  vars_files:
-    - 'example-vars.yml'
+  vars:
 
   roles:
-    - { role: ansible-nodejs, tags: ['ansible-nodejs'] }
-    - { role: "{{ role_name | default('ansible-pm2') }}", tags: ['ansible-pm2'] }
+    - { role: "ansible-nodejs", tags: ['nodejs'] }
+    - { role: "{{ role_name | default('ansible-pm2') }}", tags: ['pm2'] }

@@ -2,9 +2,9 @@
 
 galaxy_info:
   author: "Patrick Ringl"
-  description: "Ansible role for NodeJS PM2"
+  description: "An Ansible role which installs and configures the production process manager for Node.JS applications"
   license: "MIT"
-  min_ansible_version: 2.0
+  min_ansible_version: "2.0.2.0"
   galaxy_tags:
     - "nodejs"
     - "pm2"

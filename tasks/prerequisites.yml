@@ -4,8 +4,3 @@
   fail:
     msg: "Unfortunately, the 'pm2'-role is not supported on {{ ansible_distribution_release }}! :-("
   when: ansible_distribution_release|lower not in pm2_supported_distro_list
-
-- name: fail unless mandatory variables are set
-  fail:
-    msg: "Please specify: pm2_version"
-  when: pm2_version is not defined or not pm2_version

@@ -1,22 +1,10 @@
 ---
 
-#
-# prerequisites
-#
-pm2_supported_distro_list:
-  - "trusty"
-  - "jessie"
-
-#
-# installl
-#
+pm2_bin: "/usr/bin/pm2"
+pm2_npm_global: "yes"
 pm2_npm_name: "pm2"
 pm2_npm_production: "yes"
-pm2_npm_state: "present"
-pm2_npm_global: "yes"
-
-#
-# configure
-#
-pm2_bin: "/usr/bin/pm2"
 pm2_startup_user: "root"
+pm2_supported_distro_list:
+  - "jessie"
+pm2_version: "2.4.6"
