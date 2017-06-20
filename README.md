@@ -17,7 +17,7 @@ An Ansible role which installs and configures the production process manager for
 
 ## Requirements
 
-Currently this role is developed for and tested on Debian GNU/Linux (release: jessie). It is assumed to work on other Debian distributions as well.
+Currently this role is developed for and tested on Debian GNU/Linux (release: stretch). It is assumed to work on other Debian distributions as well.
 
 Ansible version compatibility:
 
@@ -52,7 +52,7 @@ variable | default | notes
 `npm_name` | `"pm2"` | `The name of the 'pm2'-npm-package that is to be installed`
 `npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
 `startup_user` | `"root"` | `The user under which pm2's startup script is executed under`
-`supported_distro_list` | `['jessie']` | `A list of distribution releases this role supports`
+`supported_distro_list` | `['jessie', 'stretch']` | `A list of distribution releases this role supports`
 `version` | `"2.5.0"` | `Version of the 'pm2'-npm-package that is to be installed
 
 ## Dependencies

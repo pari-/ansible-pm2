@@ -18,7 +18,7 @@ before_install:
 
 env:
   global:
-    - IMAGE=irap/docker-debian-ansible:jessie
+    - IMAGE=irap/docker-debian-ansible:stretch
   matrix:
     - ANSIBLE_VERSION=2.3.1.0
     - ANSIBLE_VERSION=2.2.3.0
