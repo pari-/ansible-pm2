@@ -9,3 +9,4 @@
     global: "{{ pm2_npm_global }}"
     version: "{{ pm2_version }}"
   changed_when: False # this is due to https://github.com/ansible/ansible/pull/22238
+  ignore_errors: "{{ ansible_check_mode }}" # this is due to //github.com/ansible/ansible/pull/<TBD>
