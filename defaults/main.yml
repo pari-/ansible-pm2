@@ -8,4 +8,4 @@ pm2_startup_user: "root"
 pm2_supported_distro_list:
   - "jessie"
   - "stretch"
-pm2_version: "2.5.0"
+pm2_version: "2.6.1"
