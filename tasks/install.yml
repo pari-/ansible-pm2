@@ -8,3 +8,4 @@
     state: "present"
     global: "{{ pm2_npm_global }}"
     version: "{{ pm2_version }}"
+  changed_when: False # this is due to https://github.com/ansible/ansible/pull/22238
