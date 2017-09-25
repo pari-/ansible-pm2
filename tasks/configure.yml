@@ -1,6 +1,6 @@
 ---
 
-- name: determine needed startup script
+- name: "determine needed startup script"
   command: |
     "{{ pm2_bin }}" startup -u "{{ pm2_startup_user }}"
   changed_when: False

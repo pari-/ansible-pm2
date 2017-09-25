@@ -22,13 +22,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       end
 
       subconfig.vm.provision :ansible do |ansible|
-        ansible.galaxy_role_file = "requirements.yml"
+        if File.exists?("requirements.yml")
+          ansible.galaxy_role_file = "requirements.yml"
+        end
         ansible.groups = {
           "#{VM_GROUP_NAME}" => Array(1..VM_COUNT).map { |j| "#{VM_BASE_NAME}#{j}" }
         }
+        ansible.become = true
+        ansible.compatibility_mode = "2.0"
         ansible.playbook = "test.yml"
-        ansible.sudo = true
-        ansible.tags = "all"
+        ansible.tags = ENV['VAGRANT_ANSIBLE_TAGS'] || 'all'
       end
     end
   end

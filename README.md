@@ -8,7 +8,7 @@ An Ansible role which installs and configures the production process manager for
 
 - [Requirements](#requirements)
 - [Example](#example)
-- [Role Variables](#role-variables)
+- [Defaults](#defaults)
 - [Dependencies](#dependencies)
 - [License](#license)
 - [Author Information](#author-information)
@@ -21,7 +21,8 @@ Currently this role is developed for and tested on Debian GNU/Linux (release: st
 
 Ansible version compatibility:
 
-- __2.3.2.0__ (current version in use for development of this role) 
+- __2.4.0.0__ (current version in use for development of this role) 
+- 2.3.2.0
 - 2.2.3.0
 - 2.1.6.0
 
@@ -30,17 +31,17 @@ Ansible version compatibility:
 ```yaml
 ---
 
-- hosts: "{{ hosts_group | default('all') }}"
-
-  vars:
-
+- hosts: "all"
   roles:
-    - { role: "ansible-nodejs", tags: ['nodejs'] }
-    - { role: "{{ role_name | default('ansible-pm2') }}", tags: ['pm2'] }
-
+    - role: "ansible-nodejs"
+      tags:
+        - "nodejs"
+    - role: "ansible-pm2"
+      tags:
+        - "pm2"
 ```
 
-## Role Variables
+## Defaults
 
 Available variables are listed below, along with default values (see defaults/main.yml). They're generally prefixed with `pm2_` (which I deliberately leave out here for better formatting).
 
@@ -52,7 +53,7 @@ variable | default | notes
 `npm_production` | `"yes"` | `Install dependencies in production mode, excluding devDependencies`
 `startup_user` | `"root"` | `The user under which pm2's startup script is executed under`
 `supported_distro_list` | `['jessie', 'stretch']` | `A list of distribution releases this role supports`
-`version` | `"2.6.1"` | `Version of the 'pm2'-npm-package that is to be installed`
+`version` | `"2.7.1"` | `Version of the 'pm2'-npm-package that is to be installed`
 
 ## Dependencies
 
