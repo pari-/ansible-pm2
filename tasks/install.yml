@@ -2,10 +2,10 @@
 
 - name: "install pm2 nodejs package"
   npm:
+    global: "{{ pm2_npm_global }}"
     name: "{{ pm2_npm_name }}"
     path: "{{ pm2_npm_path|default(omit) }}"
     production: "{{ pm2_npm_production }}"
     state: "present"
-    global: "{{ pm2_npm_global }}"
     version: "{{ pm2_version }}"
   changed_when: False # this is due to https://github.com/ansible/ansible/pull/22238
