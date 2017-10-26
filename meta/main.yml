@@ -2,9 +2,9 @@
 
 galaxy_info:
   author: "Patrick Ringl"
-  description: "An Ansible role which installs and configures the production process manager for Node.JS applications"
   dependencies:
     - "ansible-nodejs"
+  description: "An Ansible role which installs and configures the production process manager for Node.JS applications"
   galaxy_tags:
     - "nodejs"
     - "pm2"

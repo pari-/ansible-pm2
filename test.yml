@@ -8,3 +8,8 @@
     - role: "ansible-pm2"
       tags:
         - "pm2"
+  post_tasks:
+    - block:
+        - include: "tests/test_installed_pm2_version.yml"
+      tags:
+        - "tests"
