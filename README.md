@@ -21,7 +21,7 @@ Currently this role is developed for and tested on Debian GNU/Linux (release: st
 
 Ansible version compatibility:
 
-- __2.4.1.0__ (current version in use for development of this role)
+- __2.4.2.0__ (current version in use for development of this role)
 - 2.3.2.0
 - 2.2.3.0
 - 2.1.6.0
@@ -58,7 +58,7 @@ variable | default | notes
 `npm_production` | `yes` | `Install dependencies in production mode, excluding devDependencies`
 `startup_user` | `root` | `The user under which pm2's startup script is executed under`
 `supported_distro_list` | `['jessie', 'stretch']` | `A list of distribution releases this role supports`
-`version` | `2.7.2` | `Version of the 'pm2'-npm-package that is to be installed`
+`version` | `2.8.0` | `Version of the 'pm2'-npm-package that is to be installed`
 
 ## Dependencies
 
