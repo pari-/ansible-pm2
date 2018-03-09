@@ -58,7 +58,7 @@ variable | default | notes
 `npm_production` | `yes` | `Install dependencies in production mode, excluding devDependencies`
 `startup_user` | `root` | `The user under which pm2's startup script is executed under`
 `supported_distro_list` | `['jessie', 'stretch']` | `A list of distribution releases this role supports`
-`version` | `2.8.0` | `Version of the 'pm2'-npm-package that is to be installed`
+`version` | `2.10.1` | `Version of the 'pm2'-npm-package that is to be installed`
 
 ## Dependencies
 
