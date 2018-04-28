@@ -6,6 +6,5 @@ pm2_npm_name: "pm2"
 pm2_npm_production: "yes"
 pm2_startup_user: "root"
 pm2_supported_distro_list:
-  - "jessie"
   - "stretch"
-pm2_version: "2.10.1"
+pm2_version: "2.10.3"
